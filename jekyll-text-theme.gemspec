@@ -3,7 +3,7 @@
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-text-theme"
   spec.version       = "2.2.6"
-  spec.authors       = ["Tian Qi"]
+  spec.authors       = ["Vivek Tripathi"]
   spec.email         = ["kitian616@outlook.com"]
 
   spec.summary       = %q{A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.}
