@@ -1,0 +1,8 @@
+version: "3.5"
+
+services:
+  cp-handbook:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - 4000:4000
