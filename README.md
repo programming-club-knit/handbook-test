@@ -20,3 +20,62 @@ You can contribute by:
 - Adding more **practice problems** and **solutions**. ✅
 - Improving or refining existing content. 🔨
 - Sharing **useful resources** that others might find helpful. 📚
+
+## 💻⚙️ Development environment installation
+
+You can set up the development environment in two ways:  
+
+1. **Using Docker (Recommended)**  
+2. **Direct Installation (Manual)**  
+
+### Prerequisites
+
+- **For Docker**: [Docker](https://www.docker.com/) installed on your system, refer [installation guide](https://docs.docker.com/get-started/get-docker/).  
+- **For Direct Installation**: You need first install Ruby and Jekyll, see [Installation](https://jekyllrb.com/docs/installation/) for details.
+
+### 1. Using Docker (Recommended)  
+
+Follow these steps to set up and preview the project using Docker:  
+
+1. **Generate the Gemfile.lock file**:
+
+    ```bash
+    docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:latest bundle install
+   ```
+
+2. **Build Docker image**:
+
+    ```bash
+    docker-compose build
+    ```
+
+3. **Start the local development server**:
+
+    ```bash
+    docker-compose up
+    ```
+
+### 2. Direct Installation (Manual)
+
+Follow these steps if you prefer to set up the project manually:
+
+1. **Install dependencies using Bundler**:
+
+    ```bash
+    bundle install --path vendor/bundle
+    ```
+
+2. **Start the local development server**:
+
+    ```bash
+    bundle exec jekyll serve
+    ```
+
+### Local Preview
+
+1. **Start development server**:
+    - For **Docker**, run `docker-compose up` to start development server.
+    - For **Direct**, run `bundle exec jekyll serve` to start the development server.
+
+2. **Local Preview**:
+    - Visit [http://localhost:4000/](http://localhost:4000/) to preview site.
