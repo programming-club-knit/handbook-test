@@ -39,8 +39,18 @@ Follow these steps to set up and preview the project using Docker:
 
 1. **Generate the Gemfile.lock file**:
 
+Use below command to create Gemfile.lock file as per your system's configuration:
+- **For MacOs/Linux:**
     ```bash
     docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:latest bundle install
+   ```
+- **For Windows(Command Prompt):**
+    ```bash
+     docker run --rm -v "%cd%":/usr/src/app -w /usr/src/app ruby:latest bundle install ⁠
+   ```
+- **For Windows(Powershell):**
+    ```bash
+    docker run --rm -v "${PWD}:/usr/src/app" -w /usr/src/app ruby:latest bundle install
    ```
 
 2. **Build Docker image**:
